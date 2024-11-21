@@ -27,7 +27,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: mathiawj/idata2502_h24_app:latest
+          tags: mahtias/idata2502_h24_app:latest
 
   deploy:
     runs-on: ubuntu-latest
