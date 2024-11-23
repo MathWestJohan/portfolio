@@ -1,4 +1,4 @@
-name: CI/CD Pipeline for OpenStack
+name: CI/CD Pipeline for Google App Engine
 
 on:
   push:
@@ -33,16 +33,14 @@ jobs:
     runs-on: ubuntu-latest
     needs: build-and-push
     steps:
-      - name: Install kubectl
-        uses: azure/setup-kubectl@v1
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v0
 
-      - name: Set up Kubernetes config
-        uses: azure/k8s-set-context@v1
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v0
         with:
-          method: kubeconfig
-          kubeconfig: ${{ secrets.KUBECONFIG }}
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
 
-      - name: Deploy to Kubernetes
+      - name: Deploy to Google App Engine
         run: |
-          kubectl apply -f deployment.yaml
-          kubectl apply -f service.yaml
+          gcloud app deploy --quiet

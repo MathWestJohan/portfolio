@@ -1,9 +1,5 @@
-runtime: nodejs22
-env: standard
+runtime: nodejs14
 
 handlers:
-  - url: /static
-    static_dir: build/static
   - url: /.*
-    static_files: build/index.html
-    upload: build/ind ex.html
+    script: auto
