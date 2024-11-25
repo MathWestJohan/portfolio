@@ -15,6 +15,10 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
 
+      - name: install dependencies
+        run: npm install
+
+
       - name: Build App
         run: npm run build
 
