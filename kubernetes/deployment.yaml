@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: my-app
-          image: mathiawj/idata2502_h24_app:latest
+          image: mahtias/idata2502_h24_app:latest
           ports:
             - containerPort: 8080
