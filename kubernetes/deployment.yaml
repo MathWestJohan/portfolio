@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: my-app
-          image: europe-north1-docker.pkg.dev/portfolio-assigment/idata2503-portfolio/my-app:latest
+          image: europe-north1-docker.pkg.dev/portfolio-assigment/idata2502-portfolio/my-app:latest
           ports:
             - containerPort: 8080
           livenessProbe:
