@@ -51,7 +51,7 @@ jobs:
 
       - name: Configure kubectl
         run: |
-          gcloud container clusters get-credentials <CLUSTER_NAME> --region <REGION>
+          gcloud container clusters get-credentials portfolio-cluster --region europe-north1
 
       - name: Deploy to Kubernetes
         run: |
