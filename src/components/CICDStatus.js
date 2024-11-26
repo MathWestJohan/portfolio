@@ -1,11 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 function CICDStatus() {
-    const [] = useState({
-        lastBuild: null,
-        buildStatus: "Unknown",
-        duration: "Unknown",
-    });
     return (
         <div>
             <h3>CI/CD Pipeline Status</h3>
