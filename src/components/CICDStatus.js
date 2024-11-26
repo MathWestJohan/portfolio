@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 function CICDStatus() {
-    const [status, setStatus] = useState({
+    const [] = useState({
         lastBuild: null,
         buildStatus: "Unknown",
         duration: "Unknown",
