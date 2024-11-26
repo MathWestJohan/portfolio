@@ -52,6 +52,11 @@ jobs:
         with:
           credentials_json: ${{ secrets.GCP_SA_KEY }}
 
+      - name: Install GKE Auth Plugin
+        run: |
+          gcloud components install gke-cloud-auth-plugin
+          gcloud auth configure-docker
+
       - name: Configure kubectl
         run: |
           gcloud container clusters get-credentials portfolio-cluster --region europe-north1
