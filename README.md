@@ -14,3 +14,23 @@ This project demonstrates a React application deployed to Google Kubernetes Engi
 - Google Cloud Integration: Utilizes GKE for scalable hosting and Artifact Registry for Docker image management.
 
 ## DevOps Tools and Technologies used
+### Containerization:
+- Docker: For containerizing the application and creating consistent environments.
+### CI/CD:
+- GitHub Actions: To automate testing, building, and deploying the application.
+- Docker Build-Push Action: For building and pushing Docker images to the Google Artifact Registry.
+
+### Cloud Platform:
+#### Google Cloud Platform (GCP):
+- Google Kubernetes Engine (GKE): For managing and deploying Kubernetes clusters.
+- Google Artifact Registry: For storing Docker images.
+
+### Kubernetes:
+- Liveness and Readiness Probes: To monitor pod health and ensure smooth deployments.
+- kubectl: For managing Kubernetes clusters.
+### Monitoring and Logging:
+- Cloud Monitoring: For tracking deployment and pipeline metrics.
+- kubectl logs: For debugging issues in pods.
+### Testing:
+- Jest: A JavaScript testing framework for unit and integration testing.
+- @testing-library/react: For React component testing.
