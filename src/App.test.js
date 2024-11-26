@@ -4,6 +4,6 @@ import React from 'react';
 
 test('renders portfolio assignment w.m', () => {
   render(<App />);
-  const welcomeElement = screen.getByText(/Portfolio Assigment/i);
-  expect(linkElement).toBeInTheDocument();
+  const welcomeElement = screen.getByText(/Portfolio pipeline assigment/i);
+  expect(welcomeElement).toBeInTheDocument();
 });
