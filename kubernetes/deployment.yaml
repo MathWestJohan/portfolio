@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: my-app
-          image: mahtias/idata2502_h24_app:latest
+          image: europe-north1-docker.pkg.dev/portfolio-assigment/idata2503-portfolio/my-app:latest
           ports:
             - containerPort: 8080
