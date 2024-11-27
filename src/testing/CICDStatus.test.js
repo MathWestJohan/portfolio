@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import CICDStatus from './CICDStatus';
+import CICDStatus from '../components/CICDStatus';
 
 describe('CICDStatus Component', () => {
     test('renders CI/CD Pipeline Status section', () => {

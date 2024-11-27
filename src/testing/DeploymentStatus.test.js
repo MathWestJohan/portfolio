@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import DeploymentStatus from './DeploymentStatus';
+import DeploymentStatus from '../components/DeploymentStatus';
 
 describe('DeploymentStatus Component', () => {
     test('renders Deployment Status table', () => {

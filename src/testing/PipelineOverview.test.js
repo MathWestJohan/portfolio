@@ -1,5 +1,5 @@
 import { render, screen, within } from '@testing-library/react';
-import PipelineOverview from './PipelineOverview';
+import PipelineOverview from '../components/PipelineOverview';
 
 describe('PipelineOverview Component', () => {
     test('renders Pipeline Overview section', () => {
