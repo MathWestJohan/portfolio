@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: my-app
-          image: europe-north1-docker.pkg.dev/portfolio-assigment/idata2502-portfolio/my-app:latest
+          image: europe-north1-docker.pkg.dev/portfolio-assigment/idata2502-portfolio/my-app:PLACEHOLDER_TAG
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
