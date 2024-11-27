@@ -36,7 +36,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/idata2502_h24_app:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/idata2502_h24_app:${{ github.sha }}
 
   deploy:
     runs-on: ubuntu-latest
@@ -81,8 +81,11 @@ jobs:
         run: |
           kubectl rollout status deployment/my-app --timeout=300s
 
-      - name: Rollback on failure
+      - name: Debug on failure
         if: failure()
         run: |
-          echo "Deployment failed, rolling back..."
-          kubectl rollout undo deployment/my-app
+          echo "Deployment failed. Fetching logs..."
+          kubectl get pods
+          kubectl describe pods
+          kubectl logs -l app=my-app
+      
