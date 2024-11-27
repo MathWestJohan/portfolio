@@ -13,7 +13,7 @@ function App() {
             <div className="modal">
                 <h1>Portfolio Pipeline Project, Cloud administration</h1>
                 <p>This is, once again, an example of CI/CD pipeline deployment using Kubernetes for the computer engineering IDATA2502 course.</p>
-                <p>Authored by: Yours truly, Matias And Leo</p>
+                <p>Authored by: Yours truly, Matias</p>
 
                 {/* Tab Navigation */}
                 <div className="tab-navigation">
