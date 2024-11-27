@@ -36,14 +36,13 @@ jobs:
         uses: google-github-actions/auth@v1
         with:
           credentials_json: ${{ secrets.SA_KEY }}
-
       - name: Configure Docker for Artifact Registry
         run: gcloud auth configure-docker europe-north1-docker.pkg.dev
 
       - name: Build and push Docker image
         run: |
           docker build -t europe-north1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/idata2502_h24_app/my-app:${{ github.sha }} .
-          docker tag europe-north1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/idata2502_h24_app/my-app:${{ github.sha }} europe-north1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/portfolio-repo/react-app:latest
+          docker tag europe-north1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/idata2502_h24_app/my-app:${{ github.sha }} europe-north1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/idata2502_h24_app/my-app:latest
           docker push europe-north1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/idata2502_h24_app/my-app:${{ github.sha }}
           docker push europe-north1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/idata2502_h24_app/my-app:latest
 
