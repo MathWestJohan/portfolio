@@ -1,16 +1,16 @@
-import React from "react";
-import { render, screen } from "@testing-library/react";
-import PipelineOverview from "./PipelineOverview";
+import { render, screen, within } from '@testing-library/react';
+import PipelineOverview from './PipelineOverview';
 
-describe("PipelineOverview Component", () => {
-    test("renders Pipeline Overview section", () => {
+describe('PipelineOverview Component', () => {
+    test('renders Pipeline Overview section', () => {
         render(<PipelineOverview />);
         expect(screen.getByText(/Pipeline Overview/i)).toBeInTheDocument();
     });
 
-    test("displays pipeline details", () => {
+    test('displays pipeline details', () => {
         render(<PipelineOverview />);
-        expect(screen.getByText(/Source Control/i)).toBeInTheDocument();
-        expect(screen.getByText(/GitHub/i)).toBeInTheDocument();
+        const listItems = screen.getAllByRole('listitem');
+        expect(listItems.length).toBe(5); // Total number of list items
+        expect(listItems.some((item) => item.textContent.includes('Source Control: GitHub'))).toBe(true);
     });
 });

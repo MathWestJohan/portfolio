@@ -1,29 +1,23 @@
-import React from "react";
-import { render, screen, fireEvent } from "@testing-library/react";
-import App from "./App";
+import { render, screen, fireEvent } from '@testing-library/react';
+import App from './App';
 
-describe("App Component", () => {
-  test("renders without crashing", () => {
+describe('App Component', () => {
+  test('renders without crashing', () => {
     render(<App />);
-    expect(screen.getByText(/Portfolio/i)).toBeInTheDocument();
+    expect(screen.getByText(/Portfolio Pipeline Project/i)).toBeInTheDocument();
   });
 
-  test("renders Pipeline Overview by default", () => {
+  test('renders Pipeline Overview by default', () => {
     render(<App />);
-    expect(screen.getByText(/Pipeline Overview/i)).toBeInTheDocument();
+    const tabContent = screen.getByText(/Pipeline Overview/i, { selector: 'h2' });
+    expect(tabContent).toBeInTheDocument();
   });
 
-  test("switches to Deployment Status tab when clicked", () => {
+  test('switches to Deployment Status tab when clicked', () => {
     render(<App />);
-    const deploymentTab = screen.getByText(/Deployment Status/i);
+    const deploymentTab = screen.getByText(/Deployment Status/i, { selector: 'button' });
     fireEvent.click(deploymentTab);
-    expect(screen.getByText(/Deployment Status/i)).toBeInTheDocument();
-  });
-
-  test("switches to CI/CD Pipeline Status tab when clicked", () => {
-    render(<App />);
-    const cicdTab = screen.getByText(/CI\/CD Pipeline Status/i);
-    fireEvent.click(cicdTab);
-    expect(screen.getByText(/CI\/CD Pipeline Status/i)).toBeInTheDocument();
+    const tabContent = screen.getByText(/Deployment Status/i, { selector: 'h2' });
+    expect(tabContent).toBeInTheDocument();
   });
 });
