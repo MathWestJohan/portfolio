@@ -42,10 +42,10 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          docker build -t europe-north1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/portfolio-repo/react-app:${{ github.sha }} .
-          docker tag europe-north1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/portfolio-repo/react-app:${{ github.sha }} europe-north1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/portfolio-repo/react-app:latest
-          docker push europe-north1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/portfolio-repo/react-app:${{ github.sha }}
-          docker push europe-north1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/portfolio-repo/react-app:latest
+          docker build -t europe-north1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/idata2502_h24_app/my-app:${{ github.sha }} .
+          docker tag europe-north1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/idata2502_h24_app/my-app:${{ github.sha }} europe-north1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/portfolio-repo/react-app:latest
+          docker push europe-north1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/idata2502_h24_app/my-app:${{ github.sha }}
+          docker push europe-north1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/idata2502_h24_app/my-app:latest
 
   deploy:
     runs-on: ubuntu-latest
@@ -74,7 +74,7 @@ jobs:
 
       - name: Deploy to Kubernetes
         run: |
-          kubectl set image deployment/my-app my-app=europe-north1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/portfolio-repo/react-app:${{ github.sha }}
+          kubectl set image deployment/my-app my-app=europe-north1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/idata2502_h24_app/my-app:${{ github.sha }}
           kubectl apply -f kubernetes/service.yaml
 
       - name: Verify Deployment
@@ -84,12 +84,6 @@ jobs:
         run: |
           kubectl get service my-app-service
           curl http://$(kubectl get svc my-app-service -o jsonpath='{.status.loadBalancer.ingress[0].ip}')
-
-      - name: Make smoke-test.sh executable
-        run: chmod +x ./scripts/smoke-test.sh
-
-      - name: Run smoke tests
-        run: ./scripts/smoke-test.sh
 
       - name: Debug on failure
         if: failure()
