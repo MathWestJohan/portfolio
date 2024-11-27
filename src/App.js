@@ -12,7 +12,7 @@ function App() {
             <div className="background"></div> {/* Background Image */}
             <div className="modal">
                 <h1>Portfolio Pipeline Examination</h1>
-                <p>An example of CI/CD pipeline deployment using Kubernetes for the computer engineering IDATA2502 course.</p>
+                <p>This is an example of CI/CD pipeline deployment using Kubernetes for the computer engineering IDATA2502 course.</p>
                 <p>Authored by: Matias</p>
 
                 {/* Tab Navigation */}
