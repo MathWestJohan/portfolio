@@ -11,7 +11,7 @@ function App() {
         <div className="App">
             <div className="background"></div> {/* Background Image */}
             <div className="modal">
-                <h1>Portfolio Pipeline Examination</h1>
+                <h1>Portfolio Pipeline Project for Cloud administration</h1>
                 <p>This is an example of CI/CD pipeline deployment using Kubernetes for the computer engineering IDATA2502 course.</p>
                 <p>Authored by: Matias</p>
 
