@@ -26,11 +26,7 @@ This project demonstrates a React application deployed to Google Kubernetes Engi
 - Google Artifact Registry: For storing Docker images.
 
 ### Kubernetes:
-- Liveness and Readiness Probes: To monitor pod health and ensure smooth deployments.
 - kubectl: For managing Kubernetes clusters.
-### Monitoring and Logging:
-- Cloud Monitoring: For tracking deployment and pipeline metrics.
-- kubectl logs: For debugging issues in pods.
 ### Testing:
 - Jest: A JavaScript testing framework for unit and integration testing.
 - @testing-library/react: For React component testing.
