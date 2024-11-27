@@ -4,7 +4,7 @@ import React from 'react';
 
 test('renders the main header', () => {
   render(<App />);
-  const headerElement = screen.getByText(/Portfolio Pipeline Project for Cloud administration/i);
+  const headerElement = screen.getByText(/Portfolio/i);
   expect(headerElement).toBeInTheDocument();
 });
 

@@ -11,9 +11,9 @@ function App() {
         <div className="App">
             <div className="background"></div> {/* Background Image */}
             <div className="modal">
-                <h1>Portfolio Pipeline Project for Cloud administration</h1>
-                <p>This is an example of CI/CD pipeline deployment using Kubernetes for the computer engineering IDATA2502 course.</p>
-                <p>Authored by: Matias</p>
+                <h1>Portfolio Pipeline Project, Cloud administration</h1>
+                <p>This is yet again an example of CI/CD pipeline deployment using Kubernetes for the computer engineering IDATA2502 course.</p>
+                <p>Authored by: Yours truly, Matias</p>
 
                 {/* Tab Navigation */}
                 <div className="tab-navigation">
