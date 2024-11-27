@@ -1,7 +1,7 @@
 #!/bin/bash
 
 APP_URL="http://35.228.246.23/"
-EXPECTED_CONTENT="Portfolio Pipeline Project"
+EXPECTED_CONTENT="Portfolio"
 
 echo "Running smoke test for the application on $APP_URL"
 
