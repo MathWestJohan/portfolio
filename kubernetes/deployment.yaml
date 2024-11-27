@@ -21,18 +21,10 @@ spec:
             httpGet:
               path: /healthz
               port: 3000
-            initialDelaySeconds: 10
-            timeoutSeconds: 1
-            periodSeconds: 5
-            successThreshold: 1
-            failureThreshold: 3
-
+            initialDelaySeconds: 20
           readinessProbe:
             httpGet:
               path: /healthz
               port: 3000
-            initialDelaySeconds: 5
-            timeoutSeconds: 1
-            periodSeconds: 3
-            successThreshold: 1
-            failureThreshold: 3
+            initialDelaySeconds: 15
+
