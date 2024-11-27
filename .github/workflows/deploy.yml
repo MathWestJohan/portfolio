@@ -117,3 +117,5 @@ jobs:
         run: |
           echo "Deployment failed, rolling back..."
           kubectl rollout undo deployment/my-app
+      - name: Run Smoke Test
+        run: ./scripts/smoke-test.sh
