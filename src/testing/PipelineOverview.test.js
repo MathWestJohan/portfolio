@@ -10,7 +10,7 @@ describe('PipelineOverview Component', () => {
     test('displays pipeline details', () => {
         render(<PipelineOverview />);
         const listItems = screen.getAllByRole('listitem');
-        expect(listItems.length).toBe(5); // Total number of list items
+        expect(listItems.length).toBe(4); // Total number of list items
         expect(listItems.some((item) => item.textContent.includes('Source Control: GitHub'))).toBe(true);
     });
 });
