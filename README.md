@@ -9,9 +9,9 @@ This project demonstrates a React application deployed to Google Kubernetes Engi
 
 - CI/CD Pipeline: Automates the build, test, and deployment processes using GitHub Actions.
 
-- Dockerized Application: Uses Docker for containerization, enabling seamless deployment.
+- Dockerized Application: Uses Docker for containerization.
 
-- Google Cloud Integration: Utilizes GKE for scalable hosting and Artifact Registry for Docker image management.
+- Google Cloud Integration: Utilizes GKE for hosting and Artifact Registry for Docker image management.
 
 ## DevOps Tools and Technologies used
 ### Containerization:
