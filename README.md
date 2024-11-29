@@ -1,6 +1,7 @@
 # Portfolio Project: React App Deployed to Kubernetes with CI/CD
 
 This project demonstrates a React application deployed to Google Kubernetes Engine (GKE), with CI/CD pipelines managed using GitHub Actions. The app is containerized using Docker, and the images are pushed to DockerHub for deployment.
+The project website is accessable at [http://35.228.246.23/]
 ## Features
 
 - React Frontend: A modern web app built using Create React App.
